@@ -112,3 +112,11 @@ header nav a {
 header nav h2 {
   margin-bottom: 0.75rem;
 }
+
+/* Mobile layout */
+@media (max-width: 800px) {
+  #my-fridge,
+  #meal-suggestions {
+    grid-column: 1 / 13;
+  }
+}
