@@ -8,3 +8,107 @@
 }
 
 /* START BELOW */
+/* The container: 12 equal columns */
+.page {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+/* Digital Fridge heading */
+.page > h1 {
+  grid-column: 1 / 13;
+  white-space: nowrap;
+}
+
+/* Hero section */
+#hero {
+  grid-column: 1 / 13;
+}
+
+/* My Fridge + Pantry */
+#my-fridge {
+  grid-column: 1 / 7;
+}
+
+/* Meal Suggestions */
+#meal-suggestions {
+  grid-column: 7 / 13;
+}
+
+/* Meal Planning */
+#meal-planning {
+  grid-column: 1 / 13;
+}
+
+/* Header + Navigation */
+header {
+  grid-column: 1 / 13;
+}
+
+/* Show the boundaries of each section */
+header,
+#hero,
+#my-fridge,
+#meal-suggestions,
+#meal-planning {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+/* Add space above this heading */
+#my-fridge h3 {
+  margin-top: 1.5rem;
+}
+
+/* Space out meal suggestions for easier reading */
+
+#meal-suggestions > h3 {
+  margin-bottom: 1rem;
+}
+
+#meal-suggestions article:first-of-type {
+  margin-top: 1rem;
+}
+
+#meal-suggestions article + article {
+  margin-top: 1rem;
+}
+
+#meal-suggestions article p {
+  margin-top: 0.25rem;
+}
+
+#meal-suggestions button {
+  margin-top: 1rem;
+}
+
+/* Add space before Get Started */
+#hero a {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+/* Add space between ingredients */
+#my-fridge ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#my-fridge > div {
+  margin-top: 1rem;
+}
+
+/* Space out Meal Planning */
+#meal-planning h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add space between navigation links */
+header nav a {
+  margin-right: 0.75rem;
+}
+
+/* Add space below Digital Fridge in the footer */
+header nav h2 {
+  margin-bottom: 0.75rem;
+}
