@@ -28,17 +28,17 @@
 
 /* My Fridge + Pantry */
 #my-fridge {
+  grid-column: 1 / 13;
+}
+
+/* Meal Suggestions — left side */
+#meal-suggestions {
   grid-column: 1 / 7;
 }
 
-/* Meal Suggestions */
-#meal-suggestions {
-  grid-column: 7 / 13;
-}
-
-/* Meal Planning */
+/* Meal Planning — right side */
 #meal-planning {
-  grid-column: 1 / 13;
+  grid-column: 7 / 13;
 }
 
 /* Header + Navigation */
@@ -96,6 +96,14 @@ header,
 #my-fridge > div {
   margin-top: 1rem;
 }
+/* fridge shown beside pantry on full screen */
+.fridge-pantry {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  align-items: start;
+}
 
 /* Space out Meal Planning */
 #meal-planning h3 {
@@ -116,7 +124,18 @@ header nav h2 {
 /* Mobile layout */
 @media (max-width: 800px) {
   #my-fridge,
-  #meal-suggestions {
+  #meal-suggestions,
+  #meal-planning {
     grid-column: 1 / 13;
   }
+}
+#my-fridge > h2 {
+  margin-bottom: 1rem;
+}
+
+.fridge-pantry {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
 }
