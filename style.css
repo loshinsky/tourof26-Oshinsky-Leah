@@ -139,3 +139,14 @@ header nav h2 {
   gap: 24px;
   align-items: start;
 }
+img {
+  max-width: 100%;
+}
+
+/* Banner image above the title */
+.page > img {
+  grid-column: 1 / 13;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
