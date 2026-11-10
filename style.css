@@ -173,29 +173,48 @@ img {
   max-width: 100%;
 }
 
+
 /* === TABLET + MOBILE === */
 @media (max-width: 800px) {
+
+  /* Main sections use the full page width */
   #my-fridge,
   #meal-suggestions,
   #meal-planning {
     grid-column: 1 / 13;
   }
+
+  /* Navigation stacks vertically on smaller screens */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Fridge, Pantry, and Leftovers can wrap */
+  .fridge-pantry {
+    flex-wrap: wrap;
+  }
+
+  .fridge-pantry > div {
+    flex: 1 1 200px;
+  }
 }
 
+/* === SMALL MOBILE SCREENS === */
 @media (max-width: 600px) {
+
+  /* Recipe cards stack vertically */
   .meal-cards {
     grid-template-columns: 1fr;
   }
 
+  /* Fridge sections stack vertically */
   .fridge-pantry {
     flex-direction: column;
   }
 
+  /* Recipe images */
   .meal-card img {
     height: 260px;
-  }
-
-  nav {
-    flex-direction: column;
   }
 }
