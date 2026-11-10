@@ -13,3 +13,11 @@
 | Meal Planning     | Meal categories and weekly planner             | Two                   | Grid          | Grid organizes the meal planner into rows and columns.                        |
 | Expiring Soon     | Ingredient names and expiration dates          | One (a column)        | Flex          | Flex stacks the ingredients and their expiration information.                 |
 | Footer            | About information and footer content           | One (a row)           | Flex          | Flex lines up footer content horizontally.                                    |
+
+## One decision I rethought
+
+My Meal Suggestions section originally had its meal cards stacked vertically. I decided to add a two-column grid because I want the meal suggestions to sit side by side and be evenly spaced. Grid works well because I want to organize the cards into columns.
+
+## One decision I rethought
+
+My Meal Suggestions section originally had two meal cards stacked vertically. I decided to add a two-column grid because I want the meal suggestions to sit side by side and be evenly spaced. Grid works well because I want to organize the cards into columns.

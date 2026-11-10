@@ -1,3 +1,4 @@
+
 /* === RESET === */
 *,
 *::before,
@@ -7,28 +8,45 @@
   box-sizing: border-box;
 }
 
-/* START BELOW */
-/* The container: 12 equal columns */
+/* === MAIN PAGE GRID === */
 .page {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
   padding: 1rem;
 }
+
 /* Digital Fridge heading */
 .page > h1 {
   grid-column: 1 / 13;
   white-space: nowrap;
 }
 
-/* Hero section */
+/* Banner image */
+.page > img {
+  grid-column: 1 / 13;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}
+
+/* === HERO === */
 #hero {
   grid-column: 1 / 13;
 }
 
-/* My Fridge + Pantry */
+#hero a {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* === MY FRIDGE + PANTRY === */
 #my-fridge {
   grid-column: 1 / 13;
+}
+
+#my-fridge > h2 {
+  margin-bottom: 1rem;
 }
 
 /* Flexbox lines up Fridge, Pantry, and Leftovers in one row. */
@@ -42,17 +60,85 @@
   flex: 1;
 }
 
-/* Meal Suggestions — left side */
+#my-fridge h3 {
+  margin-top: 1.5rem;
+}
+
+#my-fridge ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === MEAL SUGGESTIONS === */
 #meal-suggestions {
-  grid-column: 1 / 7;
+  grid-column: 1 / 13;
 }
 
-/* Meal Planning — right side */
+/* Grid places the recipe cards side by side. */
+.meal-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Individual recipe card */
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Food image */
+
+.meal-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Text underneath the image */
+.meal-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.meal-card-content h3 {
+  margin: 0;
+}
+
+.meal-card-content p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.meal-card-content span {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+#meal-suggestions button {
+  margin-top: 1rem;
+}
+
+/* === MEAL PLANNING === */
 #meal-planning {
-  grid-column: 7 / 13;
+  grid-column: 1 / 13;
 }
 
-/* Header + Navigation */
+#meal-planning h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* === HEADER + NAVIGATION === */
 
 /* Flex is best for the nav because its logo and links sit in one horizontal row. */
 header {
@@ -72,7 +158,7 @@ nav {
   gap: 1rem;
 }
 
-/* Show the boundaries of each section */
+/* === SECTION BORDERS === */
 header,
 #hero,
 #my-fridge,
@@ -81,73 +167,13 @@ header,
   border: 1px solid #ccc;
   padding: 1rem;
 }
-/* Add space above this heading */
-#my-fridge h3 {
-  margin-top: 1.5rem;
+
+/* General image sizing */
+img {
+  max-width: 100%;
 }
 
-/* Space out meal suggestions for easier reading */
-
-#meal-suggestions > h3 {
-  margin-bottom: 1rem;
-}
-
-#meal-suggestions article:first-of-type {
-  margin-top: 1rem;
-}
-
-#meal-suggestions article + article {
-  margin-top: 1rem;
-}
-
-#meal-suggestions article p {
-  margin-top: 0.25rem;
-}
-
-#meal-suggestions button {
-  margin-top: 1rem;
-}
-
-/* Add space before Get Started */
-#hero a {
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-/* Add space between ingredients */
-#my-fridge ul {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-#my-fridge > div {
-  margin-top: 1rem;
-}
-/* fridge shown beside pantry on full screen */
-.fridge-pantry {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  width: 100%;
-  align-items: start;
-}
-
-/* Space out Meal Planning */
-#meal-planning h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Add space between navigation links */
-header nav a {
-  margin-right: 0.75rem;
-}
-
-/* Add space below Digital Fridge in the footer */
-header nav h2 {
-  margin-bottom: 0.75rem;
-}
-
-/* Mobile layout */
+/* === TABLET + MOBILE === */
 @media (max-width: 800px) {
   #my-fridge,
   #meal-suggestions,
@@ -155,24 +181,21 @@ header nav h2 {
     grid-column: 1 / 13;
   }
 }
-#my-fridge > h2 {
-  margin-bottom: 1rem;
-}
 
-.fridge-pantry {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-img {
-  max-width: 100%;
-}
+@media (max-width: 600px) {
+  .meal-cards {
+    grid-template-columns: 1fr;
+  }
 
-/* Banner image above the title */
-.page > img {
-  grid-column: 1 / 13;
-  width: 100%;
-  aspect-ratio: 3 / 1;
-  object-fit: cover;
+  .fridge-pantry {
+    flex-direction: column;
+  }
+
+  .meal-card img {
+    height: 260px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
 }
