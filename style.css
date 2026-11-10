@@ -42,8 +42,23 @@
 }
 
 /* Header + Navigation */
+
+/* Flex is best for the nav because its logo and links sit in one horizontal row. */
 header {
   grid-column: 1 / 13;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Show the boundaries of each section */
