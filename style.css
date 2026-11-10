@@ -31,6 +31,17 @@
   grid-column: 1 / 13;
 }
 
+/* Flexbox lines up Fridge, Pantry, and Leftovers in one row. */
+.fridge-pantry {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.fridge-pantry > div {
+  flex: 1;
+}
+
 /* Meal Suggestions — left side */
 #meal-suggestions {
   grid-column: 1 / 7;
