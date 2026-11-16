@@ -527,7 +527,7 @@ img {
 
 /* FLOUR */
 .pantry-items li:nth-child(4) {
-  left: 40%;
+  left: 44%;
   top: 40%;
   width: 50%;
   height: 23%;
@@ -543,7 +543,7 @@ img {
 
 /* SALT + PEPPER */
 .pantry-items li:nth-child(6) {
-  left: 60%;
+  left: 56%;
   top: 58%;
   width: 20%;
   height: 45%;
@@ -581,4 +581,11 @@ img {
   margin: ;
   transform: none;
   line-height: 0;
+}
+
+/* CENTER PANTRY BUTTON */
+.pantry-card button {
+  display: block;
+  width: fit-content;
+  margin: 10px auto 0 !important;
 }
