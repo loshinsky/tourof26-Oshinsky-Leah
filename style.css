@@ -64,7 +64,7 @@
   margin-top: 1.5rem;
 }
 
-#my-fridge ul {
+.pantry-card > ul {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -217,4 +217,240 @@ img {
   .meal-card img {
     height: 260px;
   }
+}
+
+
+
+
+/* === FRIDGE + PANTRY LAYOUT === */
+
+.fridge-pantry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.fridge-card {
+  flex: 0 0 310px;
+  width: 310px;
+  min-width: 0;
+}
+
+.pantry-card {
+  flex: 1;
+  min-width: 0;
+}
+
+.pantry-card {
+  padding-top: 0;
+}
+
+
+/* === FRIDGE BACKGROUND === */
+
+.fridge-visual {
+  position: relative;
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+.fridge-background {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* === FOOD ITEMS === */
+
+.fridge-items {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fridge-items li {
+  position: absolute;
+  width: 38%;
+  height: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+}
+
+/* Give the milk more room */
+.fridge-items li:nth-child(1) {
+  width: 45%;
+  height: 25%;
+}
+
+/* Food images */
+
+.fridge-items img {
+  width: 100%;
+  height: 75%;
+  object-fit: contain;
+  display: block;
+}
+
+.fridge-items li:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  transform: scale(1.5);
+}
+/* Food labels */
+
+.fridge-items span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* === TOP ROW: MILK + EGGS === */
+
+.fridge-items li:nth-child(1) {
+  left: 12%;
+  top: 1.5%;
+}
+
+.fridge-items li:nth-child(2) {
+  left: 50%;
+  top: 7%;
+}
+/* MILK IMAGE SIZE */
+.fridge-items li:nth-child(1) img {
+  width: 100px;
+  height: 85px;
+  max-width: none;
+  flex-shrink: 0;
+}
+.fridge-items li:nth-child(2) img {
+  width: 100px;
+  height: 85px;
+}
+
+/* === MIDDLE ROW: SPINACH + TOFU === */
+
+.fridge-items li:nth-child(3) {
+  left: 12%;
+  top: 36%;
+}
+
+.fridge-items li:nth-child(4) {
+  left: 50%;
+  top: 36%;
+}
+
+/* === LEFTOVERS ROW === */
+
+.leftovers-shelf {
+  position: absolute;
+  inset: 0;
+}
+
+.leftovers-shelf h4 {
+  position: absolute;
+  top: 58%;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.leftovers-items {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.leftovers-items li {
+  position: absolute;
+  top: 62.5%;
+  width: 38%;
+  height: 18%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+}
+
+.leftovers-items li:nth-child(1) {
+  left: 12%;
+}
+
+.leftovers-items li:nth-child(2) {
+  left: 50%;
+}
+
+.leftovers-items img {
+  width: 100%;
+  height: 75%;
+  object-fit: contain;
+}
+
+.leftovers-items span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* === SMALL SCREENS === */
+
+@media (max-width: 800px) {
+  .fridge-pantry {
+    grid-template-columns: 1fr;
+  }
+
+  .fridge-visual {
+    max-width: 310px;
+  }
+}
+
+.fridge-buttons {
+  width: 100%;
+  max-width: 310px;
+  margin: 10px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+/* === EXPIRING SOON SECTION === */
+.expiring-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.expiring-section h3 {
+  margin-bottom: 0.25rem;
+}
+/* === FRIDGE + PANTRY ALIGNMENT === */
+.fridge-pantry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* This ensures the pantry stays aligned at the top with the fridge */
+  gap: 2rem;
+}
+
+/* === EXPIRING SOON SPACING & CENTERING === */
+.expiring-section {
+  text-align: left;
+  margin-top: 1rem;       /* Adds room above it */
+  margin-bottom: 2rem;    /* Adds room below it so it doesn't touch the edge of the box */
+}
+
+.expiring-section h3 {
+  margin-bottom: 0.25rem;
 }

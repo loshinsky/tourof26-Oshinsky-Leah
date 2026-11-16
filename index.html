@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,107 +8,151 @@
   </head>
   <body>
     <!-- START BELOW -->
-       <div class="page">
-  <img src="fridge-banner.jpg" alt="Fresh fruits and vegetables arranged on a kitchen counter">
+    <div class="page">
+      <img src="fridge-banner.jpg" alt="Fresh fruits and vegetables arranged on a kitchen counter">
 
-  <h1>Digital Fridge</h1>
-  
-<section id="hero">
-  <h1>What's in your fridge?</h1>
-      <p>See what you have.</p>
-      <p>Know what to make.</p>
-<a id="features" href="#my-fridge">Get Started</a>
-    </section>
-    <!-- MY FRIDGE + PANTRY SECTION -->
-<section id="my-fridge">
-  <h2>My Fridge + Pantry</h2>
+      <h1>Digital Fridge</h1>
+      
+      <section id="hero">
+        <h1>What's in your fridge?</h1>
+        <p>See what you have.</p>
+        <p>Know what to make.</p>
+        <a id="features" href="#my-fridge">Get Started</a>
+      </section>
 
-  <div class="fridge-pantry">
-    <div>
-      <h3>Fridge</h3>
-    <ul>
-      <li>Milk</li>
-      <li>Eggs</li>
-      <li>Spinach</li>
-      <li>Tofu</li>
-    <button>Add Ingredient</button>
+      <!-- MY FRIDGE + PANTRY SECTION -->
+      <section id="my-fridge">
+        <h2>My Fridge + Pantry</h2>
+<div class="expiring-section">
+    <h3><a href="expiring.html">Items Expiring Soon</a></h3>
+    <p>2 items expiring soon</p>
   </div>
+        <div class="fridge-pantry">
 
-  <div>
-    <h3>Pantry</h3>
-    <ul>
-      <li>Bread</li>
-      <li>Canned Beans</li>
-    <button>Add Ingredient</button>
-  </div>
+          <!-- FRIDGE -->
+          <div class="fridge-card">
+            <div class="fridge-visual">
 
-  <div>
-    <h3>Leftovers</h3>
-    <ul>
-      <li>Tomato soup</li>
-      <li>Blueberry muffins</li>
-    <button>Add Leftovers</button>
-  </div>
-</div>
-      <h3><p><a href="expiring.html">Items Expiring Soon</a></p></h3>
-      <p>2 items expiring soon</p>
-</section>
+              <!-- Refrigerator background -->
+              <img
+                src="images/Fridge.jpeg"
+                alt="Open refrigerator"
+                class="fridge-background"
+              >
+
+              <!-- Fridge ingredients -->
+              <ul class="fridge-items">
+                <li>
+                  <img src="images/milk.png" alt="Milk">
+                  <span>Milk</span>
+                </li>
+                <li>
+                  <img src="images/eggs.png" alt="Eggs">
+                  <span>Eggs</span>
+                </li>
+                <li>
+                  <img src="images/spinach.png" alt="Spinach">
+                  <span>Spinach</span>
+                </li>
+                <li>
+                  <img src="images/tofu.png" alt="Tofu">
+                  <span>Tofu</span>
+                </li>
+              </ul>
+
+              <!-- Separate leftovers shelf -->
+              <div class="leftovers-shelf">
+                <h4>Leftovers</h4>
+                <ul class="leftovers-items">
+                  <li>
+                    <img
+                      src="images/tomato-soup.png"
+                      alt="Tomato soup in Tupperware"
+                    >
+                    <span>Tomato Soup</span>
+                  </li>
+                  <li>
+                    <img
+                      src="images/blueberry-muffins.png"
+                      alt="Blueberry muffins in Tupperware"
+                    >
+                    <span>Blueberry Muffins</span>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="fridge-buttons">
+              <button type="button">Add Ingredient</button>
+              <button type="button">Add Leftovers</button>
+            </div>
+          </div>
+
+          <!-- PANTRY -->
+          <div class="pantry-card">
+            <h3>Pantry</h3>
+            <ul>
+              <li>Bread</li>
+              <li>Canned Beans</li>
+            </ul>
+            <button type="button">Add Ingredient</button>
+          </div>
+
+        </div>
 
 
-<!-- MEAL SUGGESTIONS SECTION -->
-<section id="meal-suggestions">
-  <h2>Meals</h2>
-  <p>Get cooking with these easy-to-follow recipes.</p>
+      </section>
 
-  
-<div class="meal-cards">
+      <!-- MEAL SUGGESTIONS SECTION -->
+      <section id="meal-suggestions">
+        <h2>Meals</h2>
+        <p>Get cooking with these easy-to-follow recipes.</p>
+        
+        <div class="meal-cards">
+          <article class="meal-card">
+            <img src="images/greens-eggs.jpg"
+                 alt="Skillet greens and eggs served with toasted bread">
 
-  <article class="meal-card">
-    <img src="images/greens-eggs.jpg"
-         alt="Skillet greens and eggs served with toasted bread">
+            <div class="meal-card-content">
+              <h3>Greens & Eggs with Toast</h3>
+              <p>A nourishing breakfast with eggs, sautéed greens, and crusty bread.</p>
+              <span>15 Min</span>
+            </div>
+          </article>
 
-    <div class="meal-card-content">
-      <h3>Greens & Eggs with Toast</h3>
-      <p>A nourishing breakfast with eggs, sautéed greens, and crusty bread.</p>
-      <span>15 Min</span>
-    </div>
-  </article>
+          <article class="meal-card">
+            <img src="images/tofu-rice-bowl.jpg"
+                 alt="Tofu rice bowl with roasted red peppers">
 
-  <article class="meal-card">
-    <img src="images/tofu-rice-bowl.jpg"
-         alt="Tofu rice bowl with roasted red peppers">
+            <div class="meal-card-content">
+              <h3>Spicy Tofu Rice Bowl</h3>
+              <p>A flavorful bowl with tofu, rice, and roasted red peppers.</p>
+              <span>25 Min</span>
+            </div>
+          </article>
+        </div>
 
-    <div class="meal-card-content">
-      <h3>Spicy Tofu Rice Bowl</h3>
-      <p>A flavorful bowl with tofu, rice, and roasted red peppers.</p>
-      <span>25 Min</span>
-    </div>
-  </article>
+        <button>See More Meals</button>
+      </section>
 
-</div>
+      <!-- MEAL PLANNING SECTION -->
+      <section id="meal-planning">
+        <h2>Meal Planning</h2>
+        <h3>Stop Wondering What to Eat.</h3>
+        <a href="meal-planner.html">Plan a Meal</a>
+      </section>
 
-
-  <button>See More Meals</button>
-</section>
-
-   <!-- MEAL PLANNING SECTION -->
-<section id="meal-planning">
-  <h2>Meal Planning</h2>
-
-  <h3>Stop Wondering What to Eat.</h3>
-<a href="meal-planner.html">Plan a Meal</a>
-</section>
-
-<header id="about">
-  <nav>
-    <h2>Digital Fridge</h2>
-    <div class="nav-links">
-      <a href="#hero">Home</a>
-      <a href="#my-fridge">Features</a>
-      <a href="#about">About</a>
-    </div>
-  </nav>
-</header>
+      <header id="about">
+        <nav>
+          <h2>Digital Fridge</h2>
+          <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#my-fridge">Features</a>
+            <a href="#about">About</a>
+          </div>
+        </nav>
+      </header>
     </div>
   </body>
 </html>
