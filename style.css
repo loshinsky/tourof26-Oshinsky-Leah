@@ -454,3 +454,131 @@ img {
 .expiring-section h3 {
   margin-bottom: 0.25rem;
 }
+
+/* PANTRY VISUAL */
+
+.pantry-visual {
+  position: relative;
+  width: 100%;
+  max-width: 285px;
+  margin: 0 auto;
+}
+
+.pantry-background {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pantry-items {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERAL ITEM SETTINGS */
+.pantry-items li {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 3px;
+}
+
+.pantry-items li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pantry-items li span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* BREAD */
+.pantry-items li:nth-child(1) {
+  left: 10%;
+  top: 14.5%;
+  width: 50%;
+  height: 18%;
+}
+
+/* APPLES */
+.pantry-items li:nth-child(2) {
+  left: 43%;
+  top: 14%;
+  width: 50%;
+  height: 18%;
+}
+
+/* OLIVE OIL */
+.pantry-items li:nth-child(3) {
+  left: 10%;
+  top: 31%;
+  width: 50%;
+  height: 40%;
+}
+
+/* FLOUR */
+.pantry-items li:nth-child(4) {
+  left: 40%;
+  top: 40%;
+  width: 50%;
+  height: 23%;
+}
+
+/* BEANS */
+.pantry-items li:nth-child(5) {
+  left: 20%;
+  top: 70%;
+  width: 30%;
+  height: 23%;
+}
+
+/* SALT + PEPPER */
+.pantry-items li:nth-child(6) {
+  left: 60%;
+  top: 58%;
+  width: 20%;
+  height: 45%;
+  gap: 0;
+}
+/* FIX SALT + PEPPER LABEL SPACING */
+.pantry-items li:nth-child(6) img {
+  height: 60%;
+  flex: 0 0 60%;
+  transform: none;
+}
+
+.pantry-items li:nth-child(6) span {
+  position: static;
+  margin: 0;
+  transform: none;
+  line-height: 0;
+}
+/* FIX SALT + PEPPER LABEL SPACING */
+.pantry-items li:nth-child(6) img {
+  height: 60%;
+  flex: 0 0 60%;
+  transform: none;
+} 
+
+/* FIX SALT + PEPPER LABEL SPACING */
+.pantry-items li:nth-child(3) img {
+  height: 60%;
+  flex: 0 0 60%;
+  transform: none;
+}
+
+.pantry-items li:nth-child(3) span {
+  position: static;
+  margin: ;
+  transform: none;
+  line-height: 0;
+}
