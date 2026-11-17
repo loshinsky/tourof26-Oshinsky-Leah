@@ -20,6 +20,10 @@
 .page > h1 {
   grid-column: 1 / 13;
   white-space: nowrap;
+  text-align: center;
+}
+#hero {
+  text-align: center;
 }
 
 /* Banner image */
@@ -43,6 +47,12 @@
 /* === MY FRIDGE + PANTRY === */
 #my-fridge {
   grid-column: 1 / 13;
+
+  background-image: url("images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 #my-fridge > h2 {
@@ -435,6 +445,7 @@ img {
 
 .expiring-section h3 {
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 /* === FRIDGE + PANTRY ALIGNMENT === */
 .fridge-pantry {
@@ -544,7 +555,7 @@ img {
 /* SALT + PEPPER */
 .pantry-items li:nth-child(6) {
   left: 56%;
-  top: 58%;
+  top: 57.5%;
   width: 20%;
   height: 45%;
   gap: 0;
@@ -588,4 +599,39 @@ img {
   display: block;
   width: fit-content;
   margin: 10px auto 0 !important;
+}
+/* EXPIRING SOON TEXT + LINK */
+.expiring-section,
+.expiring-section a {
+  color: white;
+
+}
+#my-fridge > h2 {
+  text-align: center;
+}
+/* GREEN FRIDGE + PANTRY BUTTONS */
+.fridge-buttons button,
+.pantry-card button {
+  background-color: green;
+  color: white;
+  border: none;
+}
+
+/* KEEP FRIDGE + PANTRY TEXT BLACK */
+.fridge-items span,
+.leftovers-items span,
+.pantry-items span {
+  color: black;
+}
+/* KEEP LEFTOVERS HEADING BLACK */
+.leftovers-shelf h4 {
+  color: black;
+}
+.expiring-section ul {
+  list-style-position: inside;
+  text-align: center;
+  padding: 0;
+}
+.expiring-section p {
+  text-align: center;
 }
