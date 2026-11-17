@@ -1,4 +1,43 @@
 
+
+:root {
+  /* Colors */
+  --color-primary: #2a6f4e;
+  --color-secondary: #2b704f;
+  --color-text: #222;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-background: #fff;
+  --color-border: #ccc;
+  --color-shadow: rgba(0, 0, 0, 0.12);
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-base: 1rem;
+--space-large: 1.5rem;
+--space-xl: 2rem;
+  --space-small: 10px;
+  --space-medium: 20px;
+  --space-big: 40px;
+  --space-item: 3px;
+
+  /* Fonts */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: Arial, sans-serif;
+}
+
+
+  /* Spacing */
+  --space-small: 10px;
+  --space-medium: 20px;
+  --space-large: 40px;
+
+  /* Fonts */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: Arial, sans-serif;
+}
+
 /* === RESET === */
 *,
 *::before,
@@ -12,8 +51,8 @@
 .page {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
-  padding: 1rem;
+  gap: var(--space-base);
+  padding: var(--space-base);
 }
 
 /* Digital Fridge heading */
@@ -52,17 +91,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--color-white);
 }
 
 #my-fridge > h2 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-base);
 }
 
 /* Flexbox lines up Fridge, Pantry, and Leftovers in one row. */
 .fridge-pantry {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--space-large);
   align-items: stretch;
 }
 
@@ -71,12 +110,12 @@
 }
 
 #my-fridge h3 {
-  margin-top: 1.5rem;
+  margin-top: var(--space-large);
 }
 
 .pantry-card > ul {
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-large);
 }
 
 /* === MEAL SUGGESTIONS === */
@@ -88,15 +127,15 @@
 .meal-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin: 1.5rem 0;
+  gap: var(--space-large);
+  margin: var(--space-large) 0;
 }
 
 /* Individual recipe card */
 .meal-card {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--color-background);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
@@ -116,7 +155,7 @@
 .meal-card-content {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: var(--space-base);
   gap: 0.5rem;
 }
 
@@ -130,12 +169,12 @@
 }
 
 .meal-card-content span {
-  margin-top: 1rem;
+  margin-top: var(--space-base);
   font-size: 0.85rem;
 }
 
 #meal-suggestions button {
-  margin-top: 1rem;
+  margin-top: var(--space-base);
 }
 
 /* === MEAL PLANNING === */
@@ -151,7 +190,7 @@
 /* === HEADER + NAVIGATION === */
 
 /* Flex is best for the nav because its logo and links sit in one horizontal row. */
-header {
+footer {
   grid-column: 1 / 13;
 }
 
@@ -159,17 +198,17 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-base);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-base);
 }
 
 /* === SECTION BORDERS === */
-header,
+footer,
 #hero,
 #my-fridge,
 #meal-suggestions,
@@ -238,7 +277,7 @@ img {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 2rem;
+  gap: var(--space-xl);
 }
 
 .fridge-card {
@@ -371,7 +410,7 @@ img {
   top: 58%;
   width: 100%;
   text-align: center;
-  font-size: 1rem;
+  font-size: var(--space-base);
   margin: 0;
 }
 
@@ -440,7 +479,7 @@ img {
 /* === EXPIRING SOON SECTION === */
 .expiring-section {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: var(--space-xl);
 }
 
 .expiring-section h3 {
@@ -452,14 +491,14 @@ img {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* This ensures the pantry stays aligned at the top with the fridge */
-  gap: 2rem;
+  gap: var(--space-xl);
 }
 
 /* === EXPIRING SOON SPACING & CENTERING === */
 .expiring-section {
   text-align: left;
-  margin-top: 1rem;       /* Adds room above it */
-  margin-bottom: 2rem;    /* Adds room below it so it doesn't touch the edge of the box */
+  margin-top: var(--space-base);       /* Adds room above it */
+  margin-bottom: var(--space-xl);    /* Adds room below it so it doesn't touch the edge of the box */
 }
 
 .expiring-section h3 {
@@ -612,7 +651,7 @@ img {
 /* GREEN FRIDGE + PANTRY BUTTONS */
 .fridge-buttons button,
 .pantry-card button {
-  background-color: green;
+  background-color: var(--color-primary);
   color: white;
   border: none;
 }
@@ -634,4 +673,35 @@ img {
 }
 .expiring-section p {
   text-align: center;
+}
+
+footer nav h2 {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+/* FIX FOOTER ALIGNMENT */
+footer {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+
+footer nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+footer nav h2 {
+  white-space: nowrap !important;
+  width: max-content;
+  flex: 0 0 auto;
+}
+
+footer .nav-links {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
 }
